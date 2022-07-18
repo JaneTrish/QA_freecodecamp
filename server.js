@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.route('/').get((req, res) => {
-  res.render('.views/pug');
+  res.render('.views/index.pug');
 });
 
 const PORT = process.env.PORT || 3000;
