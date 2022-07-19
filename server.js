@@ -34,13 +34,10 @@ app.route('/').get((req, res) => {
 passport.serializeUser((user, done) => {
   done(null, user._id);
 });
-// passport.deserializeUser((id, done) => {
-//   myDataBase.findOne({_id: new ObjectID(id)}, (err, done)=>{
-//     done(null,null)
-//   })
-// })
 passport.deserializeUser((id, done) => {
+  //   myDataBase.findOne({_id: new ObjectID(id)}, (err, doc)=>{
   done(null, null);
+  //   })
 });
 
 const PORT = process.env.PORT || 3000;
